@@ -39,6 +39,8 @@ namespace CCPv1
                 DataInicioAssitenciaLar, DataFimAssitenciaLar, HoraAssitenciaLar);
             Console.WriteLine("Reuniões Públicas - Palestras e Passes  - durante {0} semanas",
                 NumeroSemanas);
+
+            Console.WriteLine("Teste");
         }
     }
 }
