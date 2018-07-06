@@ -1,0 +1,39 @@
+v1
+
+CRUD Pessoas
+Acompanhamento da presença nas palestras
+Identificação de provável DI
+Estatisticas e Relatórios diversos
+
+-
+
+Aprender a persistir um objeto
+	XML? SQL?
+
+Manipular dados armazenados
+
+Aprender GUI para Windows
+
+Implementar telas de interação para cada tipo de tarefa
+	Cadastro do treinamento
+	Acompanhamento das presenças
+	Acompanhamento de finalização de tratamento
+	Acompanhamento de DI
+
+-------
+
+v2
+
+Impressão de fichas
+Relatórios estatisticos
+
+-------
+
+vn
+
+Cadastro e acompanhamento de trabalhadores
+Agenda
+Impressão de ficha
+Relatórios
+Estatísticas
+
