@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CCPv1
 {
@@ -6,8 +7,9 @@ namespace CCPv1
     {
         static void Main(string[] args)
         {
-            Pessoa p1 = new Pessoa();
+            List<Pessoa> lstPessoas = new List<Pessoa>();
 
+            Pessoa p1 = new Pessoa();
             p1.Nome = "Eduardo Silva de Azeredo Lopes";
             p1.Representante = "-";
             p1.DataInicioAssitenciaLar = "01/01/2018";
@@ -15,9 +17,71 @@ namespace CCPv1
             p1.HoraAssitenciaLar = "02:20";
             p1.NumeroSemanas = 12;
 
-            p1.PrintMe();
-
+            lstPessoas.Add(p1);
+            ShowLstPessoas(lstPessoas);
             Console.ReadKey();
+            Console.Clear();
+
+            p1 = new Pessoa();
+            p1.Nome = "Karla Berninger de Azeredo Lopes";
+            p1.Representante = "-";
+            p1.DataInicioAssitenciaLar = "02/02/2019";
+            p1.DataFimAssitenciaLar = "02/02/2019";
+            p1.HoraAssitenciaLar = "03:30";
+            p1.NumeroSemanas = 10;
+
+            lstPessoas.Add(p1);
+            ShowLstPessoas(lstPessoas);
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.Clear();
+            ShowMenu();
+
+            Console.WriteLine("Fim do programa. Tecle algo para terminar.");
+            Console.ReadKey();
+        }
+
+        static void ShowLstPessoas(List<Pessoa> lst)
+        {
+            foreach(Pessoa p in lst)
+            {
+                p.PrintMe();
+                Console.WriteLine();
+            }
+        }
+
+        static void ShowMenu()
+        {
+            int opcao = Convert.ToInt32('0');
+
+            do
+            {
+                Console.Clear();
+
+                Console.WriteLine("[1] Incluir");
+                Console.WriteLine("[2] Alterar");
+                Console.WriteLine("[3] Excluir");
+                Console.WriteLine("[4] Sair");
+
+                opcao = Console.Read();
+
+                switch(Convert.ToChar(opcao))
+                {
+                    case '1':
+                        // Chamar rotina de inclusão
+                        break;
+                    case '2':
+                        // Chamar rotina de inclusão
+                        break;
+                    case '3':
+                        // Chamar rotina de inclusão
+                        break;
+                    case '4':
+                        // Sair
+                        break;
+                }
+            } while (Convert.ToChar(opcao) != '4');
 
         }
     }
@@ -39,8 +103,8 @@ namespace CCPv1
                 DataInicioAssitenciaLar, DataFimAssitenciaLar, HoraAssitenciaLar);
             Console.WriteLine("Reuniões Públicas - Palestras e Passes  - durante {0} semanas",
                 NumeroSemanas);
-
-            Console.WriteLine("Teste");
         }
     }
+
+  
 }
